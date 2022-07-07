@@ -1,0 +1,18 @@
+<header class="ts_header">
+    <nav>
+        <ul>
+            <li class="ts_brand">
+                <a routerLink="/produtos">
+                    <img src="./../../../assets/img/mercado-livre.svg" alt="Brand">
+                    <h2>TainhaShop</h2>
+                </a>
+            </li>
+            <li class="ts_search">
+                <form>
+                    <input name="search" type="search" [(ngModel)]="search"
+                        placeholder="Digite o nome do produto e pressione enter" (keyup.enter)="searchProducts()">
+                </form>
+            </li>
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,24 @@
+<div class="ts_container_login">
+    <div class="ts_login">
+        <img src="./../../../assets/img/mercado-livre.svg" alt="Brand">
+        <h1>TainhaShop <small>Created by <a href="https://www.linkedin.com/in/paulo-cesar-prado-jr/"
+                    target="_blank">Paulo Cesar Jr</a></small></h1>
+        <p>Bem-vindo(a) ao TainhaShop. Para se autenticar no sistema basta digitar um e-mail válido e aproveitar os
+            diversos produtos da nossa loja.</p>
+
+        <form class="ts_form" (ngSubmit)="login()" [formGroup]="auth">
+            <div class="ts_group">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" formControlName="email">
+            </div>
+            <div class="ts_group">
+                <button type="submit" class="btn btn_login">Entrar</button>
+            </div>
+        </form>
+
+        <div *ngIf="invalidAuth" class="ts_message">
+            <p>O e-mail informado é inválido</p>
+        </div>
+
+    </div>
+</div>

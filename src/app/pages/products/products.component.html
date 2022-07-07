@@ -1,0 +1,27 @@
+<ts-search></ts-search>
+
+<div class="ts_container">
+    <div class="ts_content">
+        <div class="ts_menu">
+            <ts-categories></ts-categories>
+        </div>
+        <div class="ts_body">
+            <h3><i class="fa-solid fa-magnifying-glass"></i> Busca de produtos <span class="ts_total">{{ total |
+                    number}}</span></h3>
+
+            <!-- produtos -->
+            <ul *ngIf="!loading" class="ts_products">
+                <li *ngFor="let product of products">
+                    <a [routerLink]="['/produto', product.id]">
+                        <ts-product-card [product]="product"></ts-product-card>
+                    </a>
+                </li>
+            </ul>
+            <!-- #end produtos -->
+
+            <!-- loading -->
+            <ts-loading *ngIf="loading"></ts-loading>
+            <!-- #end loading -->
+        </div>
+    </div>
+</div>

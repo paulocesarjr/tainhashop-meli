@@ -1,0 +1,63 @@
+@import "~src/scss/variables";
+
+.ts_header {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid $light-color;
+    display: flex;
+    justify-content: center;
+
+    nav {
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        gap: 40px;
+
+        .ts_brand {
+            a {
+                display: flex;
+                gap: 18px;
+                align-items: center;
+                text-decoration: none;
+                color: $text-color;
+
+                img {
+                    max-width: 80px;
+                }
+
+                h2 {
+                    margin: 0;
+                }
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+
+        .ts_search {
+            display: flex;
+            align-items: center;
+
+            input {
+                width: 400px;
+                padding: 14px 20px;
+                border: 1px solid $light-color;
+                border-radius: 4px;
+                outline: none;
+                font-family: "Outfit", sans-serif;
+                font-size: 16px;
+
+                &:active,
+                &:focus {
+                    border-color: $secondary-color;
+                }
+            }
+        }
+    }
+}

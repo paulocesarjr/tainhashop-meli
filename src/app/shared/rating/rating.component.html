@@ -1,0 +1,5 @@
+<ul>
+    <a [class.active]="points == point" *ngFor="let point of ratingOptions" (click)="rate(point)">
+        <li><i class="fa-solid fa-star"></i> {{point}}</li>
+    </a>
+</ul>

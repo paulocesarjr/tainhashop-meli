@@ -1,0 +1,42 @@
+<ts-search></ts-search>
+
+<div class="ts_container">
+    <div class="ts_content">
+        <div class="ts_menu">
+            <ts-categories></ts-categories>
+        </div>
+        <div class="ts_body">
+
+            <!-- produto -->
+            <div *ngIf="!loading" class="ts_product">
+                <div class="ts_product_image">
+                    <img [src]="product.pictures[0].url" alt="Foto principal">
+                </div>
+                <div class="ts_product_description">
+                    <h3>{{ product.title }}</h3>
+                    <h1>{{ product.price | currency:'BRL' }}</h1>
+                    <button *ngIf="!isOnWishlist" class="btn btn_wishlist" (click)="addToWishlist()">
+                        <i class="fa-solid fa-heart"></i>
+                        Adicionar à lista de desejos
+                    </button>
+                    <button class="btn " *ngIf="isOnWishlist" (click)="removeFromWishlist()">
+                        <i class="fa-solid fa-heart-crack"></i>
+                        Remover da lista de desejos
+                    </button>
+                    <ts-rating [productId]="product.id"></ts-rating>
+                </div>
+            </div>
+
+            <div *ngIf="!loading" class="ts_product_pictures">
+                <ul>
+                    <li *ngFor="let picture of product.pictures"><img [src]="picture.url" alt="Foto"></li>
+                </ul>
+            </div>
+            <!-- #end produto -->
+
+            <!-- loading -->
+            <ts-loading *ngIf="loading"></ts-loading>
+            <!-- #end loading -->
+        </div>
+    </div>
+</div>

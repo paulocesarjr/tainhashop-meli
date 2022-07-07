@@ -1,0 +1,57 @@
+@import "~src/scss/variables";
+
+.ts_product {
+    display: flex;
+    border: 1px solid $light-color;
+    border-radius: 4px;
+    padding: 12px 30px;
+    gap: 20px;
+
+    .ts_thumbnail {
+        display: flex;
+        align-items: center;
+
+        img {
+            max-width: 90px;
+        }
+    }
+
+    .ts_info {
+        h4 {
+            margin: 0;
+        }
+
+        h2 {
+            font-weight: 700;
+            margin-top: 12px;
+        }
+
+        p {
+            margin: 0;
+            small {
+                color: $muted-color;
+            }
+        }
+    }
+
+    .ts_actions {
+        padding: 20px 8px;
+        flex: 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 20px;
+
+        i {
+            font-size: 20px;
+        }
+
+        .fa-heart {
+            color: $whishlist-color;
+        }
+
+        .ts_rating {
+            color: $primary-color;
+        }
+    }
+}

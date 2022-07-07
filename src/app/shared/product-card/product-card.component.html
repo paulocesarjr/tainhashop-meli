@@ -1,0 +1,16 @@
+<article class="ts_product">
+    <div class="ts_thumbnail">
+        <img [src]="product.thumbnail" alt="Foto do produto">
+    </div>
+    <div class="ts_info">
+        <h4>{{ product.title }}</h4>
+        <h2>{{ product.price | currency:'BRL' }}</h2>
+        <p><small>{{ product.address.state_name }}</small></p>
+    </div>
+    <div class="ts_actions">
+        <i *ngIf="isOnWishlist" class="fa-solid fa-heart"></i>
+        <span class="ts_rating" *ngIf="points > 0">
+            <li><i class="fa-solid fa-star"></i> {{ points }}</li>
+        </span>
+    </div>
+</article>

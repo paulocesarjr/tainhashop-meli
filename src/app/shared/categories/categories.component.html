@@ -1,0 +1,9 @@
+<aside>
+    <h3><i class="fa-solid fa-list"></i> Categorias</h3>
+    <ul>
+        <a [class.active]="currentCategory == category.id" *ngFor="let category of categories"
+            (click)="viewCategory(category)">
+            <li>{{ category.name }}</li>
+        </a>
+    </ul>
+</aside>
